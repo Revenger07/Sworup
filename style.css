@@ -1,0 +1,170 @@
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+.game {
+  width: 100%;
+  max-width: 600px;
+  padding: 32px;
+  text-align: center;
+
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 20px;
+}
+
+h1 {
+  font-size: clamp(1.7rem, 5vw, 2.3rem);
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #94a3b8;
+  margin-bottom: 28px;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.score-card {
+  flex: 1;
+  padding: 16px;
+  border-radius: 14px;
+  background: #0f172a;
+}
+
+.score-card p,
+.choice-box p {
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+.score-card span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.battle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.choice-box {
+  flex: 1;
+  min-width: 0;
+  padding: 16px 8px;
+  background: #334155;
+  border-radius: 14px;
+}
+
+.choice-box span {
+  font-size: 3rem;
+}
+
+.vs {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+#result {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+#message {
+  color: #94a3b8;
+  margin-bottom: 24px;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.choice {
+  flex: 1;
+  padding: 16px 8px;
+  border: 1px solid #475569;
+  border-radius: 14px;
+  background: #334155;
+  color: white;
+  cursor: pointer;
+
+  font-size: 2rem;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.choice span {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.choice:hover {
+  background: #475569;
+  transform: translateY(-4px);
+}
+
+.choice:focus-visible,
+.reset-button:focus-visible {
+  outline: 3px solid #38bdf8;
+  outline-offset: 3px;
+}
+
+.reset-button {
+  margin-top: 24px;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 10px;
+  background: #38bdf8;
+  color: #082f49;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.reset-button:hover {
+  background: #7dd3fc;
+}
+
+@media (max-width: 420px) {
+  .game {
+    padding: 22px 14px;
+  }
+
+  .choice-box {
+    padding: 14px 4px;
+  }
+
+  .choice-box span {
+    font-size: 2.4rem;
+  }
+
+  .choices {
+    gap: 8px;
+  }
+}

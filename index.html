@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>Rock Paper Scissors</title>
+        <!-- Connect our CSS file -->
+        <link href="style.css" rel="stylesheet">
+        <!-- Connect JavaScript after HTML is parsed -->
+        <script defer src="script.js"></script>
+    </head>
+    <body>
+        <main class="game">
+            <h1>Rock Paper Scissors</h1>
+            <p class="subtitle">Choose your move. Beat the computer.</p>
+            <section class="scoreboard">
+                <div class="score-card">
+                    <p>You</p>
+                    <span id="player-score">0</span>
+                </div>
+                <div class="score-card">
+                    <p>Computer</p>
+                    <span id="computer-score">0</span>
+                </div>
+            </section>
+            <section class="battle">
+                <div class="choice-box">
+                    <p>Your choice</p>
+                    <span id="player-choice">❔</span>
+                </div>
+                <span class="vs">VS</span>
+                <div class="choice-box">
+                    <p>Computer's choice</p>
+                    <span id="computer-choice">❔</span>
+                </div>
+            </section>
+            <h2 id="result">Make your move!</h2>
+            <p id="message">First to 5 points wins.</p>
+            <section class="choices">
+                <button class="choice" data-choice="rock">
+                    ✊
+                    <span>Rock</span>
+                </button>
+                <button class="choice" data-choice="paper">
+                    ✋
+                    <span>Paper</span>
+                </button>
+                <button class="choice" data-choice="scissors">
+                    ✌️
+                    <span>Scissors</span>
+                </button>
+            </section>
+            <button class="reset-button" id="reset-button">Reset Game</button>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
